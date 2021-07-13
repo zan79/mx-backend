@@ -42,7 +42,7 @@ class ProductController extends Controller
 
     }
 
-    public function update(Request $request, Product $asset) {
+    public function update(Request $request, Product $product) {
         try {
             $product->update($request->all());
             return response()->json($product, 202);
@@ -51,7 +51,7 @@ class ProductController extends Controller
         }
     }
 
-    public function destroy(Product $asset) {
+    public function destroy(Product $product) {
         $product->delete();
         return response()->json(['message'=>'Product deleted.'],202);
     }
