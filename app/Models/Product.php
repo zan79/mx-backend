@@ -11,12 +11,12 @@ class Product extends Model
 
     protected $fillable = [
         'name',
+        'brand',
         'description',
         'price',
-        'quantity',
+        'stock',
         'contained_on',
         'acquired_on',
-        'status'
     ];
 
     public function container() {
